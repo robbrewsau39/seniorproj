@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <!-- Create a title for site-->
+        <title>Bobby's Senior Project</title>
+        <!-- Link to the CSS file -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Add character processing -->
+        <meta charset="UTF-8">
+        <!-- Adjusting the size of the page based off of the size of the device -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Adding Bootstrap from the package.json -->
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Adding Bootstraps's JS attributes -->
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body>
+        <!-- Create a nav bar at the top of a page -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <!-- Creates the home text -->
+                <a class="navbar-brand" href="index.html">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button id="mode-switcher" class="btn btn-light">Switch Mode</button>
+                <!-- Start of secondary buttons -->
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link active" aria-current="page" href="#">Dark</a>
+                </div>              
+            </div>
+        </nav>
+
+    </body>
+
+<script>
+    document.getElementById('mode-switcher').addEventListener('click', function() {
+        document.body.classList.toggle('data-bs-theme');
+    });
+</script>
+</html>
